@@ -27,8 +27,8 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 ---
 
 ### 💬 Ask Me About
-- **AWS**, Terraform, Ansible, GitHub Actions, Docker, Kubernetes
-- **Java/Spring Boot**
+- **AWS**, Terraform, Ansible, GitHub Actions, Docker, Kubernetes  
+- **Java/Spring Boot**  
 - **CI/CD pipelines and deployment automation**
 
 ---
@@ -41,14 +41,9 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 
 ---
 
-### 🏆 GitHub Trophies
-[![trophy](https://github-profile-trophy.vercel.app/?username=Boora-Raman&theme=darkhub)](https://github.com/ryo-ma/github-profile-trophy)
-
----
-
-<a href="https://github.com/Boora-Raman"><h2>🏆 GitHub Profile Trophy</h2></a>
+<a href="https://github.com/Boora-Raman"><h2>🏆 GitHub Trophies</h2></a>
 <a href="https://github.com/ryo-ma/github-profile-trophy">
-  <img width="800" src="https://github-profile-trophy.vercel.app/?username=Boora-Raman&column=7&theme=gruvbox&no-frame=true"/>
+  <img width="800" src="https://github-profile-trophy.vercel.app/?username=Boora-Raman&column=7&theme=darkhub&no-frame=true" />
 </a>
 
 ---
