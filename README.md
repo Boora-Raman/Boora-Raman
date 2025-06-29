@@ -42,7 +42,21 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 ---
 
 ### 🏆 GitHub Trophies
-[![trophy](https://github-profile-trophy.vercel.app/?username=Boora-Raman&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=Boora-Raman&theme=darkhub)](https://github.com/ryo-ma/github-profile-trophy)
+
+---
+
+<a href="https://github.com/Boora-Raman"><h2>🏆 GitHub Profile Trophy</h2></a>
+<a href="https://github.com/ryo-ma/github-profile-trophy">
+  <img width="800" src="https://github-profile-trophy.vercel.app/?username=Boora-Raman&column=7&theme=gruvbox&no-frame=true"/>
+</a>
+
+---
+
+<div align="center">
+  <img height="170" align="left" src="https://github-readme-stats.vercel.app/api?username=Boora-Raman&count_private=true&include_all_commits=true&show_icons=true&theme=gruvbox" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Boora-Raman&layout=compact&theme=gruvbox" />
+</div>
 
 ---
 
