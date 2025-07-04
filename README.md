@@ -22,8 +22,8 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
-![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style-for-the-badge&logo=jenkins&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style-for-the-badge&logo=amazon-aws&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style-for-the-badge&logo=google-cloud&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style-for-the-badge&logo=Prometheus&logoColor=white)
@@ -61,6 +61,14 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 
 ## 🌟 Featured Projects and Contributions
 
+- **[Secure CI/CD for ECS Deployments](https://github.com/Boora-Raman/secure-cicd-ecs)**
+  - Built a secure CI/CD pipeline for AWS ECS deployments, provisioning infrastructure (VPC, ALB, ECS cluster, IAM roles) with Terraform. Automated Docker image builds and deployments using GitHub Actions, reducing deployment time by 30%. Integrated SonarQube, Trivy, and OWASP for security scanning, and implemented blue-green deployments with CodeDeploy. Configured CloudWatch and SNS for monitoring and alerts.
+  - Technologies: AWS, Docker, Terraform, GitHub Actions, SonarQube, Trivy, OWASP, ECS, CodeDeploy
+
+- **[Strapi Minikube Automation](https://github.com/Boora-Raman/strapi-minikube)**
+  - Automated Strapi CMS deployment on Minikube using Terraform to provision Kubernetes infrastructure and Docker for containerization. Set up CI/CD pipelines with GitHub Actions and Jenkins, configured Nginx as a reverse proxy on AWS EC2, and implemented Prometheus/Grafana for monitoring, ensuring scalable and observable deployments.
+  - Technologies: AWS, Docker, Minikube, Kubernetes, Terraform, GitHub Actions, Jenkins, Nginx, Prometheus, Grafana
+
 - **[Strapi-Deployment](https://github.com/Boora-Raman/Strapi-Deployment)**
   - Automated deployment of a Strapi CMS to AWS ECS Fargate using Docker, Terraform, and GitHub Actions for scalable, serverless orchestration.
   - Technologies: Docker, Terraform, GitHub Actions, AWS ECS
@@ -88,10 +96,8 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 </div>
 
 <div align="center">
-  <a href="https://github.com/Boora-Raman"><h2>🏆 GitHub Trophies</h2></a>
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img width="800" src="https://github-profile-trophy.vercel.app/?username=Boora-Raman&column=7&theme=darkhub&no-frame=true" />
-  </a>
+  <h2>🏆 GitHub Trophies</h2>
+  <img width="800" src="https://github-profile-trophy.vercel.app/?username=Boora-Raman&column=7&theme=darkhub&no-frame=true" />
 </div>
 
 <div align="center">
