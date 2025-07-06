@@ -1,5 +1,3 @@
-# ![header]([YOUR_HEADER_IMAGE_URL])
-
 Hi there 👋 I'm **Raman Boora**
 
 I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure automation, cloud-native development, and scalable system design. I enjoy building reliable, maintainable, and production-ready solutions, with a keen interest in containerization, Kubernetes, and deployment strategies. Currently, I'm working on deepening my expertise in AWS, Kubernetes, and CI/CD pipelines while contributing to open-source projects.
