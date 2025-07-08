@@ -33,7 +33,7 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 </div>
 
 ## 🎓 Education
-- Bachelor's in Computer Science (2020-2024)
+- Bachelor's in Computer Science (2022-2026)
   - Relevant coursework: Cloud Computing, Linux, Containerization, Distributed Systems
 
 ## 🌱 Currently Learning
@@ -59,29 +59,17 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 
 ## 🌟 Featured Projects and Contributions
 
-- **[Secure CI/CD for ECS Deployments](https://github.com/Boora-Raman/secure-cicd-ecs)**
+- **[Secure CI/CD for ECS Deployments](https://github.com/Boora-Raman/TechNova-CI-CD-Pipeline)**
   - Built a secure CI/CD pipeline for AWS ECS deployments, provisioning infrastructure (VPC, ALB, ECS cluster, IAM roles) with Terraform. Automated Docker image builds and deployments using GitHub Actions, reducing deployment time by 30%. Integrated SonarQube, Trivy, and OWASP for security scanning, and implemented blue-green deployments with CodeDeploy. Configured CloudWatch and SNS for monitoring and alerts.
   - Technologies: AWS, Docker, Terraform, GitHub Actions, SonarQube, Trivy, OWASP, ECS, CodeDeploy
 
-- **[Strapi Minikube Automation](https://github.com/Boora-Raman/strapi-minikube)**
+- **[Strapi Minikube Automation](https://github.com/Boora-Raman/Strapi)**
   - Automated Strapi CMS deployment on Minikube using Terraform to provision Kubernetes infrastructure and Docker for containerization. Set up CI/CD pipelines with GitHub Actions and Jenkins, configured Nginx as a reverse proxy on AWS EC2, and implemented Prometheus/Grafana for monitoring, ensuring scalable and observable deployments.
   - Technologies: AWS, Docker, Minikube, Kubernetes, Terraform, GitHub Actions, Jenkins, Nginx, Prometheus, Grafana
 
-- **[Strapi-Deployment](https://github.com/Boora-Raman/Strapi-Deployment)**
-  - Automated deployment of a Strapi CMS to AWS ECS Fargate using Docker, Terraform, and GitHub Actions for scalable, serverless orchestration.
-  - Technologies: Docker, Terraform, GitHub Actions, AWS ECS
-
-- **[Medusa-Store](https://github.com/Boora-Raman/medusa-storefront)**
+- **[Medusa-Store](https://github.com/Boora-Raman/TERRAFORM-IAC-For-ECS-With-FARGATE-)**
   - Implemented a CI/CD pipeline to deploy a Medusa e-commerce platform to AWS ECS, leveraging Terraform for infrastructure and GitHub Actions for automation.
   - Technologies: GitHub Actions, Terraform, AWS ECS, Medusa
-
-- **[Web-Scraper](https://github.com/Boora-Raman/Web-scraper)**
-  - Built a web scraper using Puppeteer to extract data, stored in `scraped_data.json`, served via a Python server, and containerized with Docker for easy deployment.
-  - Technologies: JavaScript, Python, Docker
-
-- **[Backup-Script](https://github.com/Boora-Raman/Backup-Script)**
-  - Developed a Linux backup script to securely save projects to local and remote drives, including Google Drive integration using rclone.
-  - Technologies: Bash, Python, Rclone, Linux
 
 ## 🌐 Portfolio
 ✨ Explore my [personal website](https://boora-raman.github.io/) to discover my projects and professional journey!
@@ -104,7 +92,6 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 
 ## 📫 Connect With Me
 - 💼 LinkedIn: [Raman Boora](https://linkedin.com/in/boora-raman)
-- 🌐 Website: [boora-raman.github.io](https://boora-raman.github.io/)
 - 📧 Email: booraraman2000@gmail.com
 - 🧩 LeetCode: [booraraman2004](https://leetcode.com/u/booraraman2004/)
 
