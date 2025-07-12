@@ -1,166 +1,99 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Font Settings */
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
+/* Custom styles */
 body {
     font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Color Variables */
-:root {
-    --navy-800: #1e3a8a;
-    --navy-900: #1c2e6d;
-    --teal-400: #2dd4bf;
-    --teal-500: #14b8a6;
-    --teal-600: #0d9488;
+.bg-navy-900 {
+    background-color: #1a202c;
 }
 
-/* Preloader */
-.loader {
-    animation: spin 1s linear infinite;
+.bg-navy-800 {
+    background-color: #2d3748;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.text-teal-300 {
+    color: #4fd1c5;
 }
 
-/* Animations */
-@keyframes fade-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.text-teal-400 {
+    color: #38b2ac;
 }
 
-@keyframes scale-in {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-@keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.animate-fade-in {
-    animation: fade-in 0.8s ease-in-out;
-}
-
-.animate-scale-in {
-    animation: scale-in 0.4s ease-in-out;
-}
-
-.animate-gradient-shift {
-    background-size: 200% 200%;
-    animation: gradient-shift 15s ease infinite;
-}
-
-/* Header */
-.s-header {
-    transition: background-color 0.3s ease;
-}
-
-/* Navigation */
-.main-nav a {
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-/* Mobile Menu */
-.mobile-menu {
-    transition: transform 0.3s ease;
-    transform: translateY(-100%);
-}
-
-.mobile-menu:not(.hidden) {
-    transform: translateY(0);
-}
-
-.mobile-menu a {
-    font-weight: 600;
-}
-
-/* Contact Section */
-#contact h2, #contact h3 {
-    font-weight: 600;
-}
-
-/* Project Cards */
-.grid > div {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid > div:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Modal Styles */
-.modal {
-    transition: opacity 0.3s ease;
-}
-
-.modal-popup {
-    transform: scale(0.95);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.modal:not(.hidden) .modal-popup {
-    transform: scale(1);
-    opacity: 1;
-}
-
-/* Button Styles */
 .btn {
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .text-5xl {
-        font-size: 2.5rem;
-    }
-    .text-2xl {
-        font-size: 1.5rem;
-    }
-    .text-xl {
-        font-size: 1.25rem;
-    }
-    .grid {
-        grid-template-columns: 1fr;
-    }
-    .main-nav {
-        display: none;
-    }
-    .mobile-menu-toggle {
-        display: block;
-    }
-    .mobile-menu a {
-        font-size: 1.25rem;
-    }
-    .w-32 {
-        width: 6rem;
-        height: 6rem;
-    }
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
 }
 
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+.animate-gradient-shift {
+    animation: gradientShift 10s infinite alternate;
+}
+
+@keyframes gradientShift {
+    from { background-position: 0% 0%; }
+    to { background-position: 100% 100%; }
+}
+
+.loader {
+    border-top-color: #4fd1c5;
+}
+
+.modal {
+    display: none;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-popup {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+/* Enhanced Intro Section */
+#intro {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#intro .flex {
+    max-width: 1200px;
+    width: 100%;
+}
+
+#intro img {
+    transition: transform 0.3s ease;
+}
+
+#intro img:hover {
+    transform: scale(1.15);
 }
