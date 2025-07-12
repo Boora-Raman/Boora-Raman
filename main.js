@@ -1,65 +1,47 @@
 // Preloader
-window.addEventListener('load', () => {
+window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 300);
-    }, 500);
+    preloader.classList.add('hidden');
 });
 
-// Typed.js for Intro
-const typed = new Typed('#typed', {
-    strings: ['DevOps Engineer', 'Kubernetes Enthusiast', 'Full-Stack Developer', 'Cloud Architect'],
+// Typed.js Animation
+var typed = new Typed('#typed', {
+    strings: ['DevOps Engineer', 'Cloud Architect', 'Full-Stack Developer'],
     typeSpeed: 50,
     backSpeed: 30,
-    loop: true,
-    backDelay: 1500
+    backDelay: 2000,
+    startDelay: 1000,
+    loop: true
 });
 
-// Smooth Scrolling
-document.querySelectorAll('.smoothscroll').forEach(anchor => {
+// Mobile Menu Toggle
+document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+    document.querySelector('.mobile-menu').classList.toggle('hidden');
+});
+
+// Smooth Scroll
+document.querySelectorAll('a.smoothscroll').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-        // Close mobile menu if open
-        const mobileMenu = document.querySelector('.mobile-menu');
-        if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
 // Modal Functionality
-document.querySelectorAll('a[href^="#modal-"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const modalId = link.getAttribute('href').substring(1);
-        const modal = document.getElementById(modalId);
-        modal.classList.remove('hidden');
-    });
-});
-
-document.querySelectorAll('.modal-close').forEach(button => {
-    button.addEventListener('click', () => {
-        button.closest('.modal').classList.add('hidden');
-    });
-});
-
-// Close modal when clicking outside
-document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.add('hidden');
+document.querySelectorAll('.modal-close, .modal').forEach(item => {
+    item.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal-close') || e.target.classList.contains('modal')) {
+            document.querySelectorAll('.modal').forEach(modal => modal.classList.remove('active'));
         }
     });
 });
 
-// Mobile Menu Toggle
-document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
-    const mobileMenu = document.querySelector('.mobile-menu');
-    mobileMenu.classList.toggle('hidden');
+document.querySelectorAll('a[href^="#modal-"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const modalId = this.getAttribute('href');
+        document.querySelector(modalId).classList.add('active');
+    });
 });
