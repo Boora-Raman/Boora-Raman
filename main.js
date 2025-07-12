@@ -2,7 +2,7 @@
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
     preloader.classList.add('hidden');
-}); 
+});
 
 // Typed.js Animation
 var typed = new Typed('#typed', {
