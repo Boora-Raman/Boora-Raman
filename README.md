@@ -72,7 +72,8 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
   - Technologies: GitHub Actions, Terraform, AWS ECS, Medusa
 
 ## 🌐 Portfolio
-✨ Explore my [personal website](https://boora-raman.github.io/) to discover my projects and professional journey!
+
+✨ Explore my [personal website](https://boora-raman.github.io/Boora-Raman/) to discover my projects and professional journey!
 
 ## 📊 GitHub Analytics
 
@@ -94,7 +95,8 @@ I'm a passionate **DevOps & Cloud enthusiast** 🚀 focused on infrastructure au
 - 💼 LinkedIn: [Raman Boora](https://linkedin.com/in/boora-raman)
 - 📧 Email: booraraman2000@gmail.com
 - 🧩 LeetCode: [booraraman2004](https://leetcode.com/u/booraraman2004/)
-
+- 🌐 Portfolio: [booraraman2004](https://boora-raman.github.io/Boora-Raman/)
+  
 <div align="center">
   <br>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/codediaz/codediaz/output/github-contribution-grid-snake.svg" />
