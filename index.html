@@ -1,653 +1,415 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Raman Boora</title>
-    <meta name="description" content="Portfolio of Raman Boora, DevOps & Cloud Engineer">
+    <title>Raman Boora - DevOps & Cloud Engineer</title>
+    <meta name="description" content="Portfolio of Raman Boora, a DevOps & Cloud Engineer specializing in CI/CD, cloud infrastructure, and full-stack development">
     <meta name="author" content="Raman Boora">
-
-    <!-- mobile specific metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- favicons -->
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Typed.js CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
     <link rel="icon" href="images/letter-r.png">
 </head>
-
-<body id="top">
-
-    <!-- preloader -->
-    <div id="preloader">
-        <div id="loader"></div>
+<body id="top" class="bg-gray-50 font-inter">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-navy-900 flex items-center justify-center z-50">
+        <div class="loader animate-spin w-12 h-12 border-4 border-teal-400 border-t-transparent rounded-full"></div>
     </div>
 
-    <!-- page wrap -->
+    <!-- Page Wrap -->
     <div class="s-pagewrap">
-        <div class="circles">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- site header -->
-        <header class="s-header">
-            <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">Raman.</a></span>
-                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
-            </div>
-            <div class="row wide main-nav-wrap">
-                <nav class="column lg-12 main-nav">
-                    <ul>
-                        <li><a target="_blank" href="https://boora-raman.github.io/Boora-Raman/" class="home-link">Raman</a></li>
-                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                        <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#works" class="smoothscroll">Works</a></li>
-                        <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
-                    </ul>
-                </nav>
+        <!-- Header -->
+        <header class="s-header bg-navy-900 text-teal-300 py-6 sticky top-0 z-40 shadow-lg">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between">
+                    <a href="index.html" class="text-2xl font-semibold text-teal-400">Raman Boora</a>
+                    <nav class="main-nav hidden md:flex space-x-6">
+                        <a href="#intro" class="smoothscroll text-teal-300 hover:text-teal-400 transition font-semibold">Intro</a>
+                        <a href="#experience" class="smoothscroll text-teal-300 hover:text-teal-400 transition font-semibold">Experience</a>
+                        <a href="#recent-works" class="smoothscroll text-teal-300 hover:text-teal-400 transition font-semibold">Recent Works</a>
+                        <a href="#all-projects" class="smoothscroll text-teal-300 hover:text-teal-400 transition font-semibold">All Projects</a>
+                        <a href="#contact" class="smoothscroll text-teal-300 hover:text-teal-400 transition font-semibold">Contact</a>
+                    </nav>
+                    <button class="md:hidden mobile-menu-toggle text-teal-300 hover:text-teal-400" aria-label="Toggle Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </header>
 
-        <!-- main content -->
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden bg-navy-800 text-teal-300 p-4 md:hidden">
+            <nav class="flex flex-col space-y-4">
+                <a href="#intro" class="smoothscroll text-teal-300 hover:text-teal-400 font-semibold">Intro</a>
+                <a href="#experience" class="smoothscroll text-teal-300 hover:text-teal-400 font-semibold">Experience</a>
+                <a href="#recent-works" class="smoothscroll text-teal-300 hover:text-teal-400 font-semibold">Recent Works</a>
+                <a href="#all-projects" class="smoothscroll text-teal-300 hover:text-teal-400 font-semibold">All Projects</a>
+                <a href="#contact" class="smoothscroll text-teal-300 hover:text-teal-400 font-semibold">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
         <main class="s-content">
-
-            <!-- intro -->
-            <section id="intro" class="s-intro target-section">
-                <div class="row intro-content wide">
-                    <div class="column">
-                        <div class="text-pretitle with-line">
-                            Hello World
-                        </div>
-                        <h1 class="text-huge-title">
-                            I am Raman Boora, <br>
-                            a DevOps & Cloud Engineer, <br>
-                            a Kubernetes Enthusiast, <br>
-                            & a Linux Power User <br>
-                        </h1>
-                    </div>
+            <!-- Intro -->
+            <section id="intro" class="bg-gradient-to-br from-navy-800 to-teal-600 text-gray-900 py-24 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-navy-800 to-teal-600 animate-gradient-shift"></div>
+                <div class="container mx-auto px-4 text-center relative z-10">
+                    <img src="./profile.jpg" alt="Raman Boora Profile" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-teal-400 animate-fade-in">
+                    <h2 class="text-xl font-semibold text-teal-400 mb-4 animate-fade-in">Welcome to My Portfolio</h2>
+                    <h1 class="text-5xl md:text-6xl font-bold leading-relaxed mb-6 animate-fade-in">
+                        Hey, I'm Raman Boora
+                    </h1>
+                    <p class="text-2xl md:text-3xl text-gray-800 mb-8">
+                        I'm a <span id="typed" class="text-teal-400 font-semibold"></span>
+                    </p>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8 animate-fade-in">
+                        Building scalable cloud solutions and full-stack applications with expertise in DevOps, Kubernetes, and cloud architecture, I’m passionate about automation and innovation, eager to drive impactful projects.
+                    </p>
+                    <a href="#experience" class="smoothscroll btn bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 transition font-medium animate-scale-in">Explore My Work</a>
                 </div>
-                <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                        <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
-                    </svg>
-                </a>
             </section>
 
-            <!-- about -->
-            <section id="about" class="s-about target-section">
-                <div class="row about-info wide" data-animate-block>
-                    <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/header.png" alt="Raman Boora" class="about-info__pic" data-animate-el>
+            <!-- Work Experience -->
+            <section id="experience" class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-xl font-semibold text-teal-400 mb-4 animate-fade-in">Work Experience</h2>
+                    <p class="text-2xl text-gray-900 mb-8">My professional journey in DevOps and cloud engineering.</p>
+                    <div class="space-y-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                            <h3 class="text-xl font-semibold text-gray-900">Xebia - DevOps Intern</h3>
+                            <p class="text-sm text-gray-600">Jun 2025 – Present</p>
+                            <p class="text-gray-700 mt-2">Provisioned AWS infrastructure (VPC, ALB, ECS cluster, IAM roles) using Terraform for microservices. Automated Docker image builds and ECS deployments with GitHub Actions, cutting deployment time by 30%. Integrated SonarQube, Trivy, and OWASP for secure CI/CD and implemented blue-green deployments with CodeDeploy.</p>
+                            <p class="text-gray-700 mt-2"><strong>Project: Secure CI/CD for ECS Deployments</strong></p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>Automated ECS deployments, reducing deployment time by 30%.</li>
+                                <li>Integrated security tools (SonarQube, Trivy, OWASP) for robust CI/CD pipelines.</li>
+                                <li>Used Terraform for VPC, ALB, ECS, and IAM setup.</li>
+                                <li>Implemented blue-green deployments with CodeDeploy for zero-downtime updates.</li>
+                            </ul>
+                            <p class="mt-2"><a href="#modal-01" class="text-teal-500 hover:underline">View Project Details</a></p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                            <h3 class="text-xl font-semibold text-gray-900">Pearls Thought Company - DevOps Trainee Intern</h3>
+                            <p class="text-sm text-gray-600">Jun 2025 – Present</p>
+                            <p class="text-gray-700 mt-2">Automated Strapi CMS deployment on Minikube with Terraform and Docker. Built CI/CD pipelines using GitHub Actions and Jenkins, configured Nginx reverse proxy on EC2, and set up Prometheus/Grafana monitoring, reducing setup time by 15%.</p>
+                            <p class="text-gray-700 mt-2"><strong>Project: Strapi Minikube Automation</strong></p>
+                            <ul class="list-disc list-inside text-gray-700 mt-2">
+                                <li>Deployed Strapi CMS on Minikube using Terraform and Docker.</li>
+                                <li>Automated CI/CD with GitHub Actions and Jenkins, cutting setup time by 15%.</li>
+                                <li>Configured Nginx reverse proxy on EC2 for efficient routing.</li>
+                                <li>Implemented Prometheus and Grafana for real-time monitoring.</li>
+                            </ul>
+                            <p class="mt-2"><a href="#modal-02" class="text-teal-500 hover:underline">View Project Details</a></p>
+                        </div>
                     </div>
-                    <div class="column lg-6 md-12">
-                        <div class="about-info__text">
-                            <h2 class="text-pretitle with-line" data-animate-el>
-                                About
-                            </h2>
-                            <p class="attention-getter" data-animate-el>
-                                I’m Raman Boora, a B.Tech graduate in Computer Science and a DevOps & Cloud Engineer with expertise in CI/CD, cloud infrastructure, and automation. Proficient in Docker, Kubernetes, Terraform, and AWS, I’ve reduced deployment cycles by up to 80% and enhanced system reliability through automation. I’m passionate about open-source contributions, pursuing certifications like AWS Certified Solutions Architect and CKA, and building scalable, secure cloud-native solutions.
+                </div>
+            </section>
+
+            <!-- Recent Works -->
+            <section id="recent-works" class="py-16 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-xl font-semibold text-teal-400 mb-4 animate-fade-in">Recent Works</h2>
+                    <p class="text-2xl text-gray-900 mb-8">My latest projects showcasing DevOps and full-stack expertise.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-01" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/secure-cicd.png" alt="Secure CI/CD" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">Secure CI/CD for ECS Deployments</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/TechNova-CI-CD-Pipeline" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-02" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/strapi-minikube.png" alt="Strapi Minikube" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">Strapi Minikube Automation</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/Strapi" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-03" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/designmyday.png" alt="DesignMyDay!" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">DesignMyDay!</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/designmyday" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Projects -->
+            <section id="all-projects" class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-xl font-semibold text-teal-400 mb-4 animate-fade-in">All Projects</h2>
+                    <p class="text-2xl text-gray-900 mb-8">A showcase of my contributions in DevOps and full-stack development.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-01" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/secure-cicd.png" alt="Secure CI/CD" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">Secure CI/CD for ECS Deployments</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/TechNova-CI-CD-Pipeline" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-02" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/strapi-minikube.png" alt="Strapi Minikube" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">Strapi Minikube Automation</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/Strapi" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-03" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/designmyday.png" alt="DesignMyDay!" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">DesignMyDay!</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/designmyday" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-04" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/pern-store.png" alt="PERN-Store" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">PERN-Store</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/PERN-Store" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-05" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/easydrive-rentals.png" alt="EASYDRIVE-RENTALS" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">EASYDRIVE-RENTALS</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/easydrive-rentals" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition border-l-4 border-teal-400">
+                            <a href="#modal-06" class="block">
+                                <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/tour-de-atlantis.png" alt="Tour de Atlantis" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <span class="text-sm text-gray-600">GitHub</span>
+                                    <h3 class="text-lg font-semibold text-gray-900">Tour de Atlantis</h3>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Boora-Raman/Hotel-Management-System" target="_blank" class="block px-4 pb-4 text-teal-500 hover:underline">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Modal Popups -->
+                    <div id="modal-01" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+                        <div class="modal-popup bg-white rounded-lg p-6 max-w-lg w-full">
+                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/secure-cicd.png" alt="Secure CI/CD" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <div class="modal-popup__desc">
+                                <h5 class="text-lg font-semibold text-gray-900">Secure CI/CD for ECS Deployments</h5>
+                                <p class="text-gray-700">Provisioned AWS infrastructure (VPC, ALB, ECS cluster, IAM roles) using Terraform for a microservices-based application. Automated Docker image builds with Git SHA tags and ECS deployments via GitHub Actions, reducing deployment time by 30%. Integrated SonarQube, Trivy, and OWASP for security and implemented blue-green deployments with CodeDeploy.</p>
+                                <p class="text-sm text-gray-600"><strong>Timeframe:</strong> Jun 2025 – Present</p>
+                                <ul class="flex flex-wrap gap-2 mt-4">
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">AWS</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Docker</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Kubernetes</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Terraform</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">GitHub Actions</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">SonarQube</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Trivy</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">OWASP</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">ECS</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">CodeDeploy</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/Boora-Raman/TechNova-CI-CD-Pipeline" target="_blank" class="text-teal-500 hover:underline mt-4 block">GitHub Link</a>
+                            <button class="modal-close mt-4 text-gray-600 hover:text-gray-800">Close</button>
+                        </div>
+                    </div>
+                    <div id="modal-02" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+                        <div class="modal-popup bg-white rounded-lg p-6 max-w-lg w-full">
+                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/strapi-minikube.png" alt="Strapi Minikube" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <div class="modal-popup__desc">
+                                <h5 class="text-lg font-semibold text-gray-900">Strapi Minikube Automation</h5>
+                                <p class="text-gray-700">Deployed Strapi CMS on a Minikube Kubernetes cluster using Terraform for infrastructure and Docker for containerization. Automated CI/CD with GitHub Actions and Jenkins, configuring Nginx reverse proxy on EC2, reducing setup time by 15%. Implemented Prometheus and Grafana for monitoring.</p>
+                                <p class="text-sm text-gray-600"><strong>Timeframe:</strong> Jun 2025 – Present</p>
+                                <ul class="flex flex-wrap gap-2 mt-4">
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">AWS</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Docker</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Minikube</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Kubernetes</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Terraform</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">GitHub Actions</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Jenkins</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Nginx</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Prometheus</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Grafana</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/Boora-Raman/Strapi" target="_blank" class="text-teal-500 hover:underline mt-4 block">GitHub Link</a>
+                            <button class="modal-close mt-4 text-gray-600 hover:text-gray-800">Close</button>
+                        </div>
+                    </div>
+                    <div id="modal-03" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+                        <div class="modal-popup bg-white rounded-lg p-6 max-w-lg w-full">
+                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/designmyday.png" alt="DesignMyDay!" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <div class="modal-popup__desc">
+                                <h5 class="text-lg font-semibold text-gray-900">DesignMyDay!</h5>
+                                <p class="text-gray-700">Developed a scalable Spring Boot backend with MongoDB, implementing REST APIs with JWT authentication. Deployed on AWS EC2 via GitHub Actions CI/CD, reducing deployment time by 20-25%. Optimized API performance with caching, cutting response time by 20%.</p>
+                                <p class="text-sm text-gray-600"><strong>Timeframe:</strong> Mar 2025 – Present</p>
+                                <ul class="flex flex-wrap gap-2 mt-4">
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Java</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Spring Boot</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">MongoDB</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">AWS</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Docker</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">GitHub Actions</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">CI/CD</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/Boora-Raman/designmyday" target="_blank" class="text-teal-500 hover:underline mt-4 block">GitHub Link</a>
+                            <button class="modal-close mt-4 text-gray-600 hover:text-gray-800">Close</button>
+                        </div>
+                    </div>
+                    <div id="modal-04" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+                        <div class="modal-popup bg-white rounded-lg p-6 max-w-lg w-full">
+                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/pern-store.png" alt="PERN-Store" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <div class="modal-popup__desc">
+                                <h5 class="text-lg font-semibold text-gray-900">PERN-Store</h5>
+                                <p class="text-gray-700">Contributed to a full-stack e-commerce platform (PostgreSQL, Express, React, Node.js), automating AWS infrastructure (EC2, RDS, S3) with Terraform and Ansible. Built CI/CD pipelines with GitHub Actions and Jenkins, integrating Kubernetes autoscaling and SonarQube, reducing setup time by 20%. Implemented Prometheus and Grafana for real-time monitoring, improving platform reliability.</p>
+                                <p class="text-sm text-gray-600"><strong>Timeframe:</strong> Oct 2024 – Dec 2024</p>
+                                <ul class="flex flex-wrap gap-2 mt-4">
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">PostgreSQL</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Express</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">React</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Node.js</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">AWS</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Terraform</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Ansible</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Docker</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">GitHub Actions</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Jenkins</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">SonarQube</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Kubernetes</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Prometheus</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Grafana</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/Boora-Raman/PERN-Store" target="_blank" class="text-teal-500 hover:underline mt-4 block">GitHub Link</a>
+                            <button class="modal-close mt-4 text-gray-600 hover:text-gray-800">Close</button>
+                        </div>
+                    </div>
+                    <div id="modal-05" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+                        <div class="modal-popup bg-white rounded-lg p-6 max-w-lg w-full">
+                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/easydrive-rentals.png" alt="EASYDRIVE-RENTALS" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <div class="modal-popup__desc">
+                                <h5 class="text-lg font-semibold text-gray-900">EASYDRIVE-RENTALS</h5>
+                                <p class="text-gray-700">Developed a full-stack vehicle rental platform with user registration, vehicle browsing, and booking functionality. Built a robust Node.js backend with Express.js, containerized with Docker, and orchestrated with Kubernetes (kubeadm) for scalability. Focused on performance optimization and secure data handling practices.</p>
+                                <p class="text-sm text-gray-600"><strong>Timeframe:</strong> Jan 2024 – May 2024</p>
+                                <ul class="flex flex-wrap gap-2 mt-4">
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">HTML</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">CSS</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">JavaScript</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Express</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Node.js</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Docker</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Kubernetes</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/Boora-Raman/easydrive-rentals" target="_blank" class="text-teal-500 hover:underline mt-4 block">GitHub Link</a>
+                            <button class="modal-close mt-4 text-gray-600 hover:text-gray-800">Close</button>
+                        </div>
+                    </div>
+                    <div id="modal-06" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+                        <div class="modal-popup bg-white rounded-lg p-6 max-w-lg w-full">
+                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/tour-de-atlantis.png" alt="Tour de Atlantis" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <div class="modal-popup__desc">
+                                <h5 class="text-lg font-semibold text-gray-900">Tour de Atlantis</h5>
+                                <p class="text-gray-700">Developed a hotel management system backend using Django and Python, supporting room bookings and role-based operations. Containerized with Docker and integrated GitHub Actions for CI/CD, improving deployment efficiency by 25%. Implemented Prometheus and Grafana for monitoring.</p>
+                                <p class="text-sm text-gray-600"><strong>Timeframe:</strong> Jan 2024 – May 2024</p>
+                                <ul class="flex flex-wrap gap-2 mt-4">
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Python</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Django</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Docker</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">GitHub Actions</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">HTML</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">CSS</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Prometheus</li>
+                                    <li class="bg-gray-200 px-3 py-1 rounded-full text-gray-700">Grafana</li>
+                                </ul>
+                            </div>
+                            <a href="https://github.com/Boora-Raman/Hotel-Management-System" target="_blank" class="text-teal-500 hover:underline mt-4 block">GitHub Link</a>
+                            <button class="modal-close mt-4 text-gray-600 hover:text-gray-800">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="py-16 bg-navy-900">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-xl font-semibold text-teal-400 mb-4 animate-fade-in">Get In Touch</h2>
+                    <p class="text-2xl text-gray-300 mb-8 animate-fade-in">
+                        I'm a DevOps and full-stack enthusiast eager to collaborate on innovative projects or explore opportunities in cloud engineering and software development. Let's connect to build something amazing!
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <h3 class="text-lg font-semibold text-teal-400 mb-4">Contact Info</h3>
+                            <p class="text-gray-300 text-lg">
+                                <a href="mailto:booraraman2004@gmail.com" class="hover:text-teal-300 transition font-medium">booraraman2004@gmail.com</a>
                             </p>
-                            <a target="_blank" href="Raman-Boora.pdf" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
                         </div>
-                    </div>
-                </div>
-
-                <div class="row about-expertise" data-animate-block>
-                    <div class="column lg-12">
-                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
-                        <ul class="skills-list h1" data-animate-el>
-                            <li>AWS</li>
-                            <li>Docker</li>
-                            <li>Kubernetes</li>
-                            <li>Terraform</li>
-                            <li>Ansible</li>
-                            <li>GitHub Actions</li>
-                            <li>Jenkins</li>
-                            <li>Prometheus</li>
-                            <li>Grafana</li>
-                            <li>Java</li>
-                            <li>Spring Boot</li>
-                            <li>Python</li>
-                            <li>Bash</li>
-                            <li>PostgreSQL</li>
-                            <li>Express</li>
-                            <li>React</li>
-                            <li>Node.js</li>
-                            <li>MongoDB</li>
-                            <li>SonarQube</li>
-                            <li>Trivy</li>
-                            <li>OWASP</li>
-                            <li>Helm</li>
-                            <li>ArgoCD</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row about-timelines" data-animate-block>
-                    <div class="column lg-6 tab-12">
-                        <h2 class="text-pretitle" data-animate-el>Experience</h2>
-                        <div class="timeline" data-animate-el>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Xebia</h4>
-                                    <h5 class="timeline__meta">DevOps Intern</h5>
-                                    <p class="timeline__timeframe">Jun 2025 – Present</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Built a secure CI/CD pipeline for AWS ECS, provisioning infrastructure with Terraform. Automated Docker image builds and deployments via GitHub Actions, reducing deployment time by 20%. Integrated SonarQube, Trivy, and OWASP for security, and implemented blue-green deployments with CodeDeploy.</p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Pearls Thought Company</h4>
-                                    <h5 class="timeline__meta">DevOps Trainee Intern</h5>
-                                    <p class="timeline__timeframe">Jun 2025 – Present</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Automated Strapi CMS deployment on Minikube with Terraform and Docker. Set up CI/CD pipelines with GitHub Actions and Jenkins, configured Nginx reverse proxy on EC2, and implemented Prometheus/Grafana monitoring, cutting setup time by 15%.</p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">DesignMyDay!</h4>
-                                    <h5 class="timeline__meta">Full-Stack Developer</h5>
-                                    <p class="timeline__timeframe">Mar 2025 – Present</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Developed a scalable Spring Boot backend with MongoDB, implementing REST APIs with JWT authentication. Deployed on AWS EC2 via GitHub Actions CI/CD, reducing deployment time by 20-25%. Optimized API performance with caching, cutting response time by 20%.</p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">PERN-Store</h4>
-                                    <h5 class="timeline__meta">Open-Source Contributor</h5>
-                                    <p class="timeline__timeframe">Oct 2024 – Dec 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Automated AWS infrastructure (EC2, RDS, S3) with Terraform and Ansible for an e-commerce platform. Built CI/CD pipelines with GitHub Actions and Jenkins, integrating Kubernetes autoscaling and SonarQube for SAST, reducing setup time by 20%.</p>
-                                </div>
-                            </div>
+                        <div class="md:w-1/3">
+                            <h3 class="text-lg font-semibold text-teal-400 mb-4">Connect with Me</h3>
+                            <ul class="space-y-3">
+                                <li><a target="_blank" href="https://github.com/Boora-Raman" class="text-gray-300 hover:text-teal-300 text-lg transition font-medium">GitHub</a></li>
+                                <li><a target="_blank" href="https://linkedin.com/in/boora-raman" class="text-gray-300 hover:text-teal-300 text-lg transition font-medium">LinkedIn</a></li>
+                                <li><a target="_blank" href="https://leetcode.com/u/booraraman2004/" class="text-gray-300 hover:text-teal-300 text-lg transition font-medium">LeetCode</a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="column lg-6 tab-12">
-                        <h2 class="text-pretitle" data-animate-el>Education</h2>
-                        <div class="timeline" data-animate-el>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">UPES, Dehradun</h4>
-                                    <h5 class="timeline__meta">B.Tech Computer Science</h5>
-                                    <p class="timeline__timeframe">2020 – 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Completed B.Tech in Computer Science with a CGPA of XII. Relevant coursework included Cloud Computing, Linux, Containerization, and Distributed Systems, providing a strong foundation for DevOps and cloud engineering.</p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Lovedale Academy, Dehradun</h4>
-                                    <h5 class="timeline__meta">Class XII</h5>
-                                    <p class="timeline__timeframe"></p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Achieved 88.1% in Class XII, building a strong academic foundation.</p>
-                                </div>
-                            </div>
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Lovedale Academy, Dehradun</h4>
-                                    <h5 class="timeline__meta">Class X</h5>
-                                    <p class="timeline__timeframe"></p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Scored 78.8% in Class X, excelling in foundational subjects.</p>
-                                </div>
-                            </div>
+                        <div class="md:w-1/3">
+                            <a href="mailto:booraraman2004@gmail.com" class="btn bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 transition font-medium w-full text-center block animate-scale-in">Send a Message</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- works -->
-            <section id="works" class="s-works target-section">
-                <div class="row works-portfolio">
-                    <div class="column lg-12" data-animate-block>
-                        <h2 class="text-pretitle" data-animate-el>Recent Works</h2>
-                        <p class="h1" data-animate-el>
-                            Here are some of my favorite projects showcasing my DevOps, cloud, and full-stack development skills. Feel free to check them out.
-                        </p>
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/secure-cicd.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">Secure CI/CD for ECS Deployments</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/secure-cicd-ecs" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/strapi-minikube.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">Strapi Minikube Automation</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/strapi-minikube" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/pern-store.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">PERN-Store</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/pern-store" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/end-to-end-cicd.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">End-to-End CI/CD</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/end-to-end-cicd" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-05">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/designmyday.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">DesignMyDay!</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/designmyday" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-06">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/tour-de-atlantis.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">Tour De Atlantis</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/tour-de-atlantis" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-07">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/strapi1.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">Strapi-Deployment</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/Strapi-Deployment" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-08">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/Medusa1.webp" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">Medusa-Store</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/medusa-storefront" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-09">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/JSplusPY.png" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">Web-Scraper</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/Web-scraper" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-10">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/backup1.webp" alt="">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">GitHub</div>
-                                        <div class="folio-list__item-title">Backup-Script</div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" target="_blank" href="https://github.com/Boora-Raman/Backup-Script" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Modal Templates Popup -->
-                    <div id="modal-01" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/secure-cicd.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Secure CI/CD for ECS Deployments</h5>
-                                <p>Provisioned AWS infrastructure using Terraform, configuring VPC, security groups, ALB, ECS cluster, and IAM roles for a microservices-based application. Implemented CI/CD pipeline with GitHub Actions, automating Docker image builds with Git SHA tags and ECS task deployments, reducing deployment time by 20%. Enhanced security with SonarQube, Trivy, and OWASP, enabling blue-green deployments via CodeDeploy.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>AWS</li>
-                                    <li>Docker</li>
-                                    <li>Terraform</li>
-                                    <li>GitHub Actions</li>
-                                    <li>SonarQube</li>
-                                    <li>Trivy</li>
-                                    <li>OWASP</li>
-                                    <li>ECS</li>
-                                    <li>CodeDeploy</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/secure-cicd-ecs" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-02" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/strapi-minikube.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Strapi Minikube Automation</h5>
-                                <p>Deployed Strapi CMS on a Minikube Kubernetes cluster using Terraform for infrastructure and Docker for containerization, configuring deployments, services, and persistent storage. Automated CI/CD with GitHub Actions and Jenkins, setting up Nginx on EC2 as a reverse proxy (ports 80, 1337), cutting setup time by 15%. Configured Prometheus and Grafana for real-time cluster monitoring.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>AWS</li>
-                                    <li>Docker</li>
-                                    <li>Minikube</li>
-                                    <li>Kubernetes</li>
-                                    <li>Terraform</li>
-                                    <li>GitHub Actions</li>
-                                    <li>Jenkins</li>
-                                    <li>Nginx</li>
-                                    <li>Prometheus</li>
-                                    <li>Grafana</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/strapi-minikube" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-03" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/pern-store.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>PERN-Store</h5>
-                                <p>Contributed to an e-commerce platform, automating AWS infrastructure (EC2, RDS, S3) with Terraform and Ansible for scalable backend and frontend services. Built CI/CD pipelines with GitHub Actions and Jenkins, integrating Kubernetes autoscaling and SonarQube for SAST, reducing setup time by 20%. Containerized the application with Docker for seamless deployment.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>PostgreSQL</li>
-                                    <li>Express</li>
-                                    <li>React</li>
-                                    <li>Node.js</li>
-                                    <li>AWS</li>
-                                    <li>Terraform</li>
-                                    <li>Ansible</li>
-                                    <li>Docker</li>
-                                    <li>GitHub Actions</li>
-                                    <li>Jenkins</li>
-                                    <li>SonarQube</li>
-                                    <li>Kubernetes</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/pern-store" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/end-to-end-cicd.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>End-to-End CI/CD</h5>
-                                <p>Deployed a Strapi app on AWS EKS via CI/CD pipelines using GitHub Actions, ArgoCD, and Helm, reducing deployment time by 80%. Integrated SonarQube for 90+% code coverage, built secure Docker images, provisioned EKS with Terraform, set up EFK for logging, and exposed the app via Route 53.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>AWS</li>
-                                    <li>Appo</li>
-                                    <li>EFK</li>
-                                    <li>EKS</li>
-                                    <li>Terraform</li>
-                                    <li>GitHub Actions</li>
-                                    <li>ArgoCD</li>
-                                    <li>Helm</li>
-                                    <li>SonarQube</li>
-                                    <li>Route 53</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/end-to-end-cicd" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-05" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/designmyday.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>DesignMyDay!</h5>
-                                <p>Built a scalable Spring Boot backend with MongoDB, implementing REST APIs with JWT authentication for enhanced security. Deployed on AWS EC2 via GitHub Actions CI/CD, achieving real-time updates and reducing deployment time by 20-25%. Optimized API performance with caching and query improvements, cutting response time by 20%.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Java</li>
-                                    <li>Spring Boot</li>
-                                    <li>MongoDB</li>
-                                    <li>AWS</li>
-                                    <li>Docker</li>
-                                    <li>GitHub Actions</li>
-                                    <li>CI/CD</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/designmyday" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-06" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/tour-de-atlantis.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Tour De Atlantis</h5>
-                                <p>Developed a web application with automated infrastructure using Terraform and Docker for scalable deployment on AWS. Implemented CI/CD pipelines with GitHub Actions to streamline builds and deployments, ensuring high availability and performance. Integrated monitoring tools for real-time insights into application health.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>AWS</li>
-                                    <li>Docker</li>
-                                    <li>Terraform</li>
-                                    <li>GitHub Actions</li>
-                                    <li>Prometheus</li>
-                                    <li>Grafana</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/tour-de-atlantis" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-07" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/strapi1.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Strapi-Deployment</h5>
-                                <p>Automated deployment of a Strapi CMS to AWS ECS Fargate using Docker, Terraform, and GitHub Actions for scalable, serverless orchestration. Streamlined CI/CD workflows to build, push, and deploy Docker images efficiently.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Javascript</li>
-                                    <li>GitHub</li>
-                                    <li>Node.js</li>
-                                    <li>Strapi</li>
-                                    <li>AWS</li>
-                                    <li>Docker</li>
-                                    <li>Terraform</li>
-                                    <li>GitHub Actions</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/Strapi-Deployment" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-08" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/Medusa1.webp" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Medusa-Store</h5>
-                                <p>Implemented a CI/CD pipeline to deploy a Medusa e-commerce platform to AWS ECS, leveraging Terraform for infrastructure and GitHub Actions for automation, ensuring efficient and reliable deployments.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Javascript</li>
-                                    <li>GitHub</li>
-                                    <li>Terraform</li>
-                                    <li>GitHub Actions</li>
-                                    <li>AWS</li>
-                                    <li>ECS</li>
-                                    <li>Medusa</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/medusa-storefront" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-09" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/JSplusPY.png" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Web-Scraper</h5>
-                                <p>Built a web scraper using Puppeteer to extract data (titles, headings, links, meta descriptions), stored in `scraped_data.json`. Served via a Python server at `http://localhost:5000` and containerized with Docker for seamless deployment.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Javascript</li>
-                                    <li>Python</li>
-                                    <li>Docker</li>
-                                    <li>GitHub</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/Web-scraper" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                    <div id="modal-10" hidden>
-                        <div class="modal-popup">
-                            <img src="https://raw.githubusercontent.com/Boora-Raman/Boora-Raman/main/images/portfolio/backup1.webp" alt="">
-                            <div class="modal-popup__desc">
-                                <h5>Backup-Script</h5>
-                                <p>Developed a Linux backup script to securely save projects to local and remote drives, including Google Drive integration using rclone. Automated backups with configurable options for enhanced data security.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Bash</li>
-                                    <li>Python</li>
-                                    <li>Rclone</li>
-                                    <li>GitHub</li>
-                                </ul>
-                            </div>
-                            <a href="https://github.com/Boora-Raman/Backup-Script" target="_blank" class="modal-popup__details">GitHub Link</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- contact -->
-            <section id="contact" class="s-contact target-section">
-                <div class="row contact-top">
-                    <div class="column lg-12">
-                        <h2 class="text-pretitle">Get In Touch</h2>
-                        <p class="h1">
-                            I’m advancing my DevOps and cloud engineering career and eager to connect with the community. Whether you have feedback, collaboration ideas, or insights on CI/CD, cloud infrastructure, or full-stack development, feel free to reach out. I’m always open to learning and contributing!
-                        </p>
-                    </div>
-                </div>
-                <div class="row contact-bottom">
-                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Reach me at</h3>
-                        <p class="contact-links">
-                            <a href="mailto:booraraman2004@gmail.com" class="mailtoui">booraraman2004@gmail.com</a>
-                        </p>
-                    </div>
-                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Social</h3>
-                        <ul class="contact-social">
-                            <li><a target="_blank" href="https://github.com/Boora-Raman">GitHub</a></li>
-                            <li><a target="_blank" href="https://linkedin.com/in/boora-raman">LinkedIn</a></li>
-                            <li><a target="_blank" href="https://leetcode.com/u/booraraman2004/">LeetCode</a></li>
-                        </ul>
-                    </div>
-                    <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:booraraman2004@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- footer -->
-        <footer class="s-footer">
-            <div class="row">
-                <div class="column ss-copyright">
-                    <span>© Copyright Raman Boora 2025</span>
-                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">Themewagon</a></span>
-                </div>
-                <div class="ss-go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
-                            <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z" />
+            <!-- Footer -->
+            <footer class="bg-navy-800 text-gray-200 py-6">
+                <div class="container mx-auto px-4 text-center">
+                    <p>© Copyright Raman Boora 2025</p>
+                    <a href="#top" class="smoothscroll mt-4 inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="w-6 h-6">
+                            <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z" fill="#2dd4bf"/>
                         </svg>
                     </a>
                 </div>
-            </div>
-        </footer>
-
+            </footer>
+        </main>
     </div>
 
     <!-- JavaScript -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
+    <script src="main.js"></script>
 </body>
 </html>
