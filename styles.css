@@ -1,6 +1,7 @@
-/* Custom styles */
 body {
     font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .bg-navy-900 {
@@ -19,6 +20,10 @@ body {
     color: #38b2ac;
 }
 
+.text-teal-200 {
+    color: #81e6d9;
+}
+
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -27,33 +32,27 @@ body {
 
 .btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.animate-fade-in {
-    animation: fadeIn 1s ease-in-out;
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.animate-scale-in {
-    animation: scaleIn 0.5s ease-in-out;
-}
-
-@keyframes scaleIn {
-    from { transform: scale(0.9); }
-    to { transform: scale(1); }
+.animate-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .animate-gradient-shift {
-    animation: gradientShift 10s infinite alternate;
+    animation: gradientShift 15s ease-in-out infinite alternate;
 }
 
 @keyframes gradientShift {
     from { background-position: 0% 0%; }
-    to { background-position: 100% 100%; }
+    to { background-position: 200% 200%; }
 }
 
 .loader {
@@ -62,6 +61,17 @@ body {
 
 .modal {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 50;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto; /* Allow scrolling if modal content overflows */
 }
 
 .modal.active {
@@ -69,8 +79,24 @@ body {
 }
 
 .modal-popup {
-    max-height: 90vh;
-    overflow-y: auto;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 32rem; /* Limit max width for readability */
+    width: 100%;
+    max-height: 90vh; /* Ensure modal fits within viewport height */
+    overflow-y: auto; /* Allow scrolling within modal */
+    scrollbar-width: thin;
+    scrollbar-color: #4fd1c5 #e2e8f0;
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    position: relative;
+}
+
+.modal-popup.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .modal-close {
@@ -83,6 +109,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 #intro .flex {
@@ -94,6 +121,32 @@ body {
     transition: transform 0.3s ease;
 }
 
-#intro img:hover {
-    transform: scale(1.25);
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4fd1c5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #38b2ac;
+}
+
+/* Page Load Animation */
+.s-pagewrap {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.s-pagewrap.loaded {
+    opacity: 1;
+    transform: translateY(0);
 }
